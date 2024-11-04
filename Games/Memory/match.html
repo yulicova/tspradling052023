@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Memory</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+</head>
+<body>
+<!--<div class="ldbtn" onclick="openLeaderboard();">Leaderboard</div>-->
+<div id="masterscore">Overall: <strong></strong></div>
+
+<div id="leaderboard">
+	<h2>Leaderboard</h2>
+	<h3>Memory Game</h3>
+	<div class="container">
+		<table>
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Name</th>
+					<th>Highscore</th>
+				</tr>
+			</thead>
+			<tbody id="lData"></tbody>
+		</table>
+	</div>
+</div>
+
+<div id="modal">
+	<h2 id="fScore"></h2>
+	<h3 id="hScore"></h3>
+	<hr>
+	<p>Is that the best you've got?</p>
+	<div>Play Again:</div>
+	<div id="difficulties">
+		<div class="difficulty" onclick="game.newBoard(2)">2 &times; 2</div>
+		<div class="difficulty" onclick="game.newBoard(4)">4 &times; 4</div>
+		<div class="difficulty" onclick="game.newBoard(6)">6 &times; 6</div>
+		<div class="difficulty" onclick="game.newBoard(8)">8 &times; 8</div>
+		<div class="difficulty death" onclick="game.newBoard(10)">10 &times; 10</div>
+	</div>
+</div>
+<div class="score">Points: <strong>0</strong></div>
+<h1>Memory</h1>
+<p id="desc">Match eight pairs of cards as fast as you can.</p>
+<div id="board"></div>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
